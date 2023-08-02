@@ -404,7 +404,7 @@ node['bcpc']['cinder']['qos']['volume_types'].each do |volume_type|
 
     only_if { node['bcpc']['cinder']['qos']['enabled'] }
     not_if <<-DOC
-      openstack volume qos show#{qos_name}
+      openstack volume qos show #{qos_name}
     DOC
   end
 
